@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import { ConfigProvider, theme } from "antd";
+import AppRoot from "./App.jsx";
+import { App, ConfigProvider, theme } from "antd";
 import "antd/dist/reset.css";
 import "./index.css";
 
@@ -48,10 +48,19 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           Input: {
             borderRadius: 8,
           },
+          Table: {
+            borderRadiusLG: 12,
+            headerBg: "#ffffff",
+          },
+          Typography: {
+            titleMarginBottom: 8,
+          },
         },
       }}
     >
-      <App />
+      <App>
+        <AppRoot />
+      </App>
     </ConfigProvider>
   </React.StrictMode>
 );
